@@ -149,7 +149,6 @@
         <section id="contact" class="container mx-auto px-4 py-16 scroll-mt-24">
             <h2 class="text-4xl font-bold text-center mb-12">Get In Touch</h2>
             <div class="glass-card rounded-3xl p-8 md:p-16 max-w-3xl mx-auto">
-                <!-- MODIFIED: The form has been changed to be submitted via JavaScript -->
                 <form name="contact" id="contact-form" class="space-y-6">
                     <div>
                         <label for="name" class="block text-zinc-400 mb-2">Name</label>
@@ -163,9 +162,9 @@
                         <label for="message" class="block text-zinc-400 mb-2">Message</label>
                         <textarea id="message" name="message" rows="5" class="w-full p-3 rounded-lg bg-zinc-800 border border-zinc-700 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-colors duration-300"></textarea>
                     </div>
-                    <!-- MODIFIED: The Turnstile widget now has a data-callback to handle success -->
+                    <!-- The Turnstile widget now has a data-callback to handle success -->
                     <div class="cf-turnstile" data-sitekey="0x4AAAAAABzHRZ12XPCBCJhj" data-callback="turnstileCallback"></div>
-                    <!-- MODIFIED: The button is initially disabled -->
+                    <!-- The button is initially disabled -->
                     <button type="submit" id="submit-button" class="w-full bg-white text-[#0d0d0d] font-semibold py-3 rounded-lg shadow-lg hover:bg-zinc-300 transition-colors duration-300" disabled>
                         Send Message
                     </button>
@@ -222,20 +221,16 @@
 
                     const form = event.target;
                     const formData = new FormData(form);
-                    const formName = form.getAttribute('name');
-
+                    
                     const submitButton = document.getElementById('submit-button');
                     submitButton.textContent = 'Sending...';
                     submitButton.disabled = true;
 
                     try {
-                        // Submit the form data to Cloudflare's Forms service
-                        const response = await fetch(`/?${new URLSearchParams(Object.fromEntries(formData)).toString()}`, {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/x-www-form-urlencoded'
-                            },
-                            body: new URLSearchParams(Object.fromEntries(formData)).toString()
+                        // Corrected: Submit the form data directly as a FormData object
+                        const response = await fetch(form.action, {
+                            method: form.method,
+                            body: formData
                         });
                         
                         // Cloudflare Forms will automatically redirect on success
