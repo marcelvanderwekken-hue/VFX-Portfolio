@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d0d;
+            color: #f0f0f0;
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-[#0d0d0d] text-zinc-200 flex items-center justify-center min-h-screen">
+
+    <main class="container mx-auto px-4 py-16 text-center max-w-2xl">
+        <div class="glass-card rounded-3xl p-8 md:p-16">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gradient">Thank You!</h1>
+            <p class="text-lg md:text-xl text-zinc-400 mb-8">Your message has been sent successfully. I'll get back to you as soon as possible.</p>
+            <a href="index.html" class="inline-block bg-white text-[#0d0d0d] font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-zinc-300 transition-colors duration-300">
+                Return to Homepage
+            </a>
+        </div>
+    </main>
+
+</body>
+</html>
