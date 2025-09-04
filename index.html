@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ADDED: Cloudflare Turnstile script -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -147,7 +149,8 @@
         <section id="contact" class="container mx-auto px-4 py-16 scroll-mt-24">
             <h2 class="text-4xl font-bold text-center mb-12">Get In Touch</h2>
             <div class="glass-card rounded-3xl p-8 md:p-16 max-w-3xl mx-auto">
-                <form class="space-y-6">
+                <!-- MODIFIED: The form is updated to work with Cloudflare and Turnstile -->
+                <form name="contact" method="POST" data-cf-action="/contact_form" class="space-y-6">
                     <div>
                         <label for="name" class="block text-zinc-400 mb-2">Name</label>
                         <input type="text" id="name" name="name" class="w-full p-3 rounded-lg bg-zinc-800 border border-zinc-700 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-colors duration-300">
@@ -160,6 +163,8 @@
                         <label for="message" class="block text-zinc-400 mb-2">Message</label>
                         <textarea id="message" name="message" rows="5" class="w-full p-3 rounded-lg bg-zinc-800 border border-zinc-700 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-colors duration-300"></textarea>
                     </div>
+                    <!-- ADDED: The Turnstile widget -->
+                    <div class="cf-turnstile" data-sitekey="0x4AAAAAABzHRZ12XPCBCJhj"></div>
                     <button type="submit" class="w-full bg-white text-[#0d0d0d] font-semibold py-3 rounded-lg shadow-lg hover:bg-zinc-300 transition-colors duration-300">
                         Send Message
                     </button>
