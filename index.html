@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VFX Artist Portfolio</title>
+    <title>Marcel Vanderwekken - VFX Artist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -38,6 +38,7 @@
             <a href="#" class="text-2xl font-bold text-gradient">Marcel Vanderwekken</a>
             <div class="space-x-8 hidden md:flex">
                 <a href="#work" class="hover:text-white transition-colors duration-300">Work</a>
+                <a href="#reels" class="hover:text-white transition-colors duration-300">Reels</a>
                 <a href="#about" class="hover:text-white transition-colors duration-300">About</a>
                 <a href="#contact" class="hover:text-white transition-colors duration-300">Contact</a>
             </div>
@@ -50,6 +51,7 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-[#0d0d0d]/90 py-4 px-4 text-center">
             <a href="#work" class="block py-2 hover:text-white transition-colors duration-300">Work</a>
+            <a href="#reels" class="block py-2 hover:text-white transition-colors duration-300">Reels</a>
             <a href="#about" class="block py-2 hover:text-white transition-colors duration-300">About</a>
             <a href="#contact" class="block py-2 hover:text-white transition-colors duration-300">Contact</a>
         </div>
@@ -75,12 +77,10 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
                 <div class="glass-card rounded-2xl overflow-hidden group">
-                    <!-- Updated with your new image URL -->
-                    <img src="https://imgur.com/2mWlVch.png" alt="Black Cat" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="https://imgur.com/tKLOAyF.png" alt="Sci-Fi Environment Concept" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
                     <div class="p-6">
-                        <!-- Updated with new text -->
-                        <h3 class="text-xl font-semibold mb-2">Captain America: Civil War</h3>
-                        <p class="text-zinc-400 text-sm" style="display: none;">Personal Project, Photography</p>
+                        <h3 class="text-xl font-semibold mb-2">Sci-Fi Environment Concept</h3>
+                        <p class="text-zinc-400 text-sm">3D Modeling, Environment Art</p>
                     </div>
                 </div>
                 <!-- Project 2 -->
@@ -127,6 +127,52 @@
             </div>
         </section>
 
+        <!-- Demo Reel Section -->
+        <section id="reels" class="container mx-auto px-4 py-16 scroll-mt-24">
+            <h2 class="text-4xl font-bold text-center mb-12">Demo Reels & Breakdowns</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video 1 -->
+                <div class="glass-card rounded-2xl overflow-hidden">
+                    <div class="aspect-w-16 aspect-h-9 relative w-full h-0 pb-[56.25%] overflow-hidden">
+                        <iframe
+                            src="https://www.youtube.com/embed/TeT6dJ3LcR4"
+                            class="absolute top-0 left-0 w-full h-full"
+                            title="Compositing Breakdown: The Matrix"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <!-- Video 2 -->
+                <div class="glass-card rounded-2xl overflow-hidden">
+                    <div class="aspect-w-16 aspect-h-9 relative w-full h-0 pb-[56.25%] overflow-hidden">
+                        <iframe
+                            src="https://www.youtube.com/embed/mcrit8mjqpo"
+                            class="absolute top-0 left-0 w-full h-full"
+                            title="VFX Demo Reel"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <!-- Video 3 -->
+                <div class="glass-card rounded-2xl overflow-hidden">
+                    <div class="aspect-w-16 aspect-h-9 relative w-full h-0 pb-[56.25%] overflow-hidden">
+                        <iframe
+                            src="https://www.youtube.com/embed/UYaf_90nNt0"
+                            class="absolute top-0 left-0 w-full h-full"
+                            title="VFX Breakdown"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- About Section -->
         <section id="about" class="container mx-auto px-4 py-16 scroll-mt-24">
             <div class="glass-card rounded-3xl p-8 md:p-16 flex flex-col md:flex-row items-center gap-8 md:gap-16">
@@ -136,9 +182,13 @@
                     <p class="text-lg text-zinc-400 mb-4">
                         I am a passionate and dedicated VFX artist with over 10 years of experience in the industry. My journey began with an obsession with VFX breakdowns and has evolved into a career creating seamless and impactful visual effects for a variety of projects. My expertise lies in keying, paintouts, and blending photo-realistic digital assets. I am always looking for new challenges and collaborative opportunities to push the boundaries of what's possible.
                     </p>
-                    <p class="text-lg text-zinc-400">
+                    <p class="text-lg text-zinc-400 mb-6">
                         I am proficient in software such as <strong class="text-zinc-200">Nuke, Mocha, DaVinci Resolve, and Blender</strong>.
                     </p>
+                    <!-- Resume Download Button -->
+                    <a href="Marcel_Vanderwekken_Resume.pdf" download class="inline-block bg-white text-[#0d0d0d] font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-zinc-300 transition-colors duration-300">
+                        Download Resume
+                    </a>
                 </div>
             </div>
         </section>
@@ -172,9 +222,8 @@
     <footer class="container mx-auto px-4 py-8 text-center text-zinc-500 text-sm">
         <p>&copy; 2024 Marcel Vanderwekken. All Rights Reserved.</p>
         <div class="mt-4 space-x-4">
-            <a href="#" class="hover:text-zinc-300 transition-colors duration-300">LinkedIn</a>
-            <a href="#" class="hover:text-zinc-300 transition-colors duration-300">ArtStation</a>
-            <a href="#" class="hover:text-zinc-300 transition-colors duration-300">Instagram</a>
+            <a href="https://www.linkedin.com/in/marcelvanderwekken/" class="hover:text-zinc-300 transition-colors duration-300">LinkedIn</a>
+            <a href="https://www.imdb.com/name/nm8344642/" class="hover:text-zinc-300 transition-colors duration-300">IMDb</a>
         </div>
     </footer>
 
